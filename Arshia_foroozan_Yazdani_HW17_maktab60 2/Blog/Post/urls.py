@@ -1,0 +1,10 @@
+from django.urls import path
+from .views import CommentApiView, CommentApiVDetail, PostApiView, PostApiDetail
+
+urlpatterns = [
+    path('comments/', CommentApiView.as_view()),
+    path('posts/', PostApiView.as_view()),
+    path('posts/<int:pk>', PostApiDetail.as_view()),
+    path('comments/<int:pk>', CommentApiVDetail.as_view()),
+
+]
